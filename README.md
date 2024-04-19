@@ -1,8 +1,57 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Prueba tecnica Moons - Senior Backend Developer
 
-Currently, two official plugins are available:
+Frontend que nos permite visualizar la interaccion de front con el backend desarrollado para la prueba tecnica.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Url de prueba
+
+- **https://moons-test-frontend.onrender.com/**
+
+## Comenzando
+
+Estas instrucciones te proporcionarán una copia del proyecto en funcionamiento en tu máquina local para fines de desarrollo y pruebas. Mira **Instalación** para saber cómo desplegar el proyecto.
+
+### Prerrequisitos
+
+Qué cosas necesitas instalar el software y cómo instalarlas
+
+```
+node --version
+yarn --version
+```
+
+### Instalación
+
+Clonar el repositorio
+
+```
+https://github.com/andresjose84/moons-test-frontend/
+```
+
+Instala las dependencias del proyecto:
+
+```
+cd moons-test-frontend
+yarn
+```
+
+Ejecutar en el servidor de desarrollo:
+
+```
+yarn run dev
+```
+
+Construido con:
+
+    Yarn 
+    Vite
+    Node.js
+    React
+    Axios
+    Redux
+    Reduxjs/toolkit
+    Bootstrap
+
+## Authors
+
+- [@andresjose84](https://github.com/andresjose84)
