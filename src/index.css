@@ -13,6 +13,8 @@
   display: flex;
   margin-bottom: 20px;
   padding: 20px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
 }
 
 .offer-image {
