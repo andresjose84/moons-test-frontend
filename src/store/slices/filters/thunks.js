@@ -5,7 +5,7 @@ export const getInitFilters = () => {
     return async ( dispatch ) => {
         try {
 
-            const { data } = await fetchApi.get( `/api/v1/init` );
+            const { data } = await fetchApi.get( `/smilecenters/init` );
 
             if ( data ) {
                 dispatch( setFilters( data ) );

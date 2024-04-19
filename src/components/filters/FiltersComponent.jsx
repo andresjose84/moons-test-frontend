@@ -25,6 +25,11 @@ export const FiltersComponent = () => {
         dispatch( setSelectService( e.target.value ) );
     };
 
+    const formatOption = ( string ) => {
+        const option = string.replace( '_', ' ' ).toLowerCase()
+        return option.charAt( 0 ).toUpperCase() + option.slice( 1 );
+    }
+
     return (
         <div className="row">
             <div className="col-md-4 mt-2">
@@ -33,7 +38,7 @@ export const FiltersComponent = () => {
                     <option value="">Seleccione</option>
                     {
                         zones.map( ( ele, key ) => {
-                            return ( <option key={ 'zona-item-' + key } value={ ele }>{ ele }</option> )
+                            return ( <option key={ 'zona-item-' + key } value={ ele }>{ formatOption( ele ) }</option> )
                         } )
                     }
                 </select>
@@ -45,7 +50,7 @@ export const FiltersComponent = () => {
                     <option value="">Seleccione</option>
                     {
                         services.map( ( ele, key ) => {
-                            return ( <option key={ 'service-item-' + key } value={ ele }>{ ele }</option> )
+                            return ( <option key={ 'service-item-' + key } value={ ele }>{ formatOption( ele ) }</option> )
                         } )
                     }
                 </select>

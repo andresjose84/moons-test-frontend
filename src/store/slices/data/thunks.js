@@ -9,8 +9,8 @@ export const getDatosInit = () => {
         dispatch( startDatos() );
         try {
             const res = await Promise.all( [
-                fetchApi.get( `api/v1/` ),
-                fetchApi.get( `/api/v1/init` )
+                fetchApi.get( `/smilecenters` ),
+                fetchApi.get( `/smilecenters/init` )
             ] );
             const { data } = res[ 0 ];
             const { data: filters } = res[ 1 ];
@@ -56,7 +56,7 @@ export const getDatos = () => {
             if ( services !== '' )
                 searchParams.append( 'services', services );
 
-            const res = await fetchApi.get( `api/v1/?${ searchParams.toString() }` );
+            const res = await fetchApi.get( `/smilecenters?${ searchParams.toString() }` );
             const { data } = res;
 
             if ( data ) {
