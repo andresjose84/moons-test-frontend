@@ -2,7 +2,6 @@ import { fetchApi } from '../../../apis/fetchApi';
 import { setFilters } from '../filters/filtersSlice';
 import { setDatos, startDatos, stopLoading } from './dataSlice';
 
-
 export const getDatosInit = () => {
     return async ( dispatch ) => {
         console.log( 'Fetch data' );
