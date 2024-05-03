@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchTest } from "../apis/fetchApi";
+import { fetchApi } from "../apis/fetchApi";
 import Swal from "sweetalert2";
 
 export const useIsActiveRender = () => {
@@ -8,7 +8,7 @@ export const useIsActiveRender = () => {
     useEffect( () => {
         const checkBackendStatus = async () => {
             try {
-                const res = await fetchTest.get();
+                const res = await fetchApi.get(`/smilecenters/status`);
                 setIsActive( res.status === 200 ); // Update isActive based on API response
             } catch ( error ) {
                 setIsActive( false ); // Set isActive to false if API request fails
