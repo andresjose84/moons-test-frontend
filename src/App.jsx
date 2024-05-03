@@ -10,7 +10,7 @@ import { useIsActiveRender } from "./hooks/useIsActiveRender";
 
 function App () {
 
-  const { isActive } = useIsActiveRender( false );
+  const { isActive } = useIsActiveRender();
   const dispatch = useDispatch();
   const { data } = useSelector( state => state.data );
 

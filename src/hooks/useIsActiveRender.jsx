@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { fetchTest } from "../apis/fetchApi";
 import Swal from "sweetalert2";
 
-export const useIsActiveRender = ( active ) => {
-    const [ isActive, setIsActive ] = useState( active );
+export const useIsActiveRender = () => {
+    const [ isActive, setIsActive ] = useState( null );
 
     useEffect( () => {
         const checkBackendStatus = async () => {
@@ -26,14 +26,16 @@ export const useIsActiveRender = ( active ) => {
     }, [] );
 
     useEffect( () => {
+        console.log( 'IsActive', isActive );
         if ( !isActive ) {
             // Show alert if backend is down
-            Swal.fire( {
-                title: "Something went wrong",
-                text:
-                    "Sorry, the backend is not available. Please wait a moment while the backend is restored.",
-                icon: "warning",
-            } );
+            if ( isActive != null )
+                Swal.fire( {
+                    title: "Something went wrong",
+                    text:
+                        "Sorry, the backend is not available. Please wait a moment while the backend is restored.",
+                    icon: "warning",
+                } );
         } else {
             // Close alert if backend is up
             Swal.close();
