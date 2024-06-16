@@ -14,14 +14,14 @@ export const ContentComponent = () => {
                     ?
                     <LoadingDatosScreen />
                     :
-                    Object.keys( data ).map( ( ele, key ) => {
+                    data.map( ( ele, key ) => {
                         return (
                             <div key={ 'group-zone-' + key } className="offers">
-                                <span className="title-card">{ ele }</span>
+                                <span className="title-card">{ ele.zone }</span>
                                 <hr />
                                 <div className="row">
                                     {
-                                        data[ ele ].map( ( ele, key ) => ( <CardComponent key={ 'card-item-' + key } { ...ele } /> ) )
+                                        ele.centers.map( ( ele, key ) => ( <CardComponent key={ 'card-item-' + key } { ...ele } /> ) )
                                     }
 
                                 </div>
