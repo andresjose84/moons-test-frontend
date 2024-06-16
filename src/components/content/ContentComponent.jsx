@@ -7,6 +7,8 @@ export const ContentComponent = () => {
 
     const { data, isLoading } = useSelector( state => state.data );
 
+    console.log( 'data', data );
+
     return (
         <div className="container">
             {
