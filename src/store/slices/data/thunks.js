@@ -14,6 +14,11 @@ export const getDatosInit = () => {
             const { data } = res[ 0 ];
             const { data: filters } = res[ 1 ];
 
+            console.log( 'data', {
+                data,
+                filters
+            } );
+
             if ( data ) {
                 dispatch( setDatos( data ) );
                 dispatch( setFilters( filters ) );
